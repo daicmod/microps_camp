@@ -20,6 +20,11 @@
 #define NET_DEVICE_IS_UP(x) ((x)->flags & NET_DEVICE_FLAG_UP)
 #define NET_DEVICE_STATE(x) (NET_DEVICE_IS_UP(x) ? "up" : "down")
 
+/* NOTE: use same value as the Ethernet types */
+#define NET_PROTOCOL_TYPE_IP   0x0800
+#define NET_PROTOCOL_TYPE_ARP  0x0806
+#define NTT_PROTOCOL_TYPE_IPV6 0x86dd
+
 struct net_device {
     struct net_device *next;
     unsigned int index;
